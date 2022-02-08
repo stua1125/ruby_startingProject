@@ -1,0 +1,22 @@
+/app/assets/images/.keep
+/app/controllers/concerns/.keep
+/app/models/concerns/.keep
+/lib/assets/.keep
+/lib/tasks/.keep
+/log/.keep
+/storage/.keep
+/test/controllers/.keep
+/test/fixtures/files/.keep
+/test/helpers/.keep
+/test/integration/.keep
+/test/mailers/.keep
+/test/models/.keep
+/test/system/.keep
+/tmp/pids/.keep
+/tmp/storage/.keep
+/tmp/.keep
+/vendor/javascript/.keep
+/vendor/.keep
+
+# idea add
+/.idea
