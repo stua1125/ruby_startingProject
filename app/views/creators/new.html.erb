@@ -1,0 +1,18 @@
+<h1>New Creator</h1>
+
+<%= form_with model: @creator do |form| %>
+  <div>
+    <%= form.label :channel %><br>
+    <%= form.text_field :channel %>
+  </div>
+
+  <div>
+    <%= form.label :contents %><br>
+    <%= form.text_area :contents %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>

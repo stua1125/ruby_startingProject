@@ -3,7 +3,7 @@
 <p><%= @art.body %></p>
 
 <ul>
-  <li><%= Article.find(2).title %></li>
+<!--  <li><%#= Article.find(2).title %></li>-->
   <li><%= link_to "Edit", edit_article_path(@art) %></li>
   <li><%= link_to "Destroy", article_path(@art), data: {
     turbo_method: :delete,

@@ -1,0 +1,54 @@
+
+<!--<p><%#= @creators.contents %></p>-->
+
+<h1><%= @cre.channel %></h1>
+<p><%= @cre.contents %></p>
+
+<h2>user list</h2>
+<% @cre.users.each do |user| %>
+  <p>
+    <strong>name:</strong>
+    <%= user.name %>
+  </p>
+
+  <p>
+    <strong>age:</strong>
+    <%= user.age %>
+  </p>
+<% end %>
+
+<%= link_to "root", root_path %>
+
+<h2>Add a user and subscript this channel:</h2>
+<%= form_with model: [ @cre, @cre.users.build ] do |form| %>
+  <%= @cre.users.class %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :age %><br>
+    <%= form.text_area :age %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+
+<h2>subscript this channel:</h2>  <!--원하는 url new_creators_user GET  path: /creators_users/new(.:format) action: creators_users#new-->
+                                  <!--controllers naming issue-->
+<%= form_with url: "/creators_users/create", method: :post do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :age %><br>
+    <%= form.text_area :age %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>

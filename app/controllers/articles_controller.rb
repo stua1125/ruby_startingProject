@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
+    @creators = Creator.all
+    @users = User.all
   end
 
   def show
