@@ -4427,3 +4427,1643 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 25ms (Views: 16.8ms | ActiveRecord: 1.6ms | Allocations: 4475)
 
 
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:01:30 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (5.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (3.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 44.2ms | Allocations: 12172)
+  Rendered layout layouts/application.html.erb (Duration: 103.1ms | Allocations: 46768)
+Completed 200 OK in 125ms (Views: 77.5ms | ActiveRecord: 28.2ms | Allocations: 65741)
+
+
+Started GET "/creators/new" for 127.0.0.1 at 2022-02-20 03:01:45 +0900
+Processing by CreatorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering creators/new.html.erb within layouts/application
+  Rendered creators/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 3081)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5180)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 5960)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-02-20 03:01:49 +0900
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for UsersController):
+  
+actionpack (7.0.0) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:01:51 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.3ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2052)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 4297)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 1.1ms | Allocations: 4596)
+
+
+Started GET "/creators/new" for 127.0.0.1 at 2022-02-20 03:01:52 +0900
+Processing by CreatorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering creators/new.html.erb within layouts/application
+  Rendered creators/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 820)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2898)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 3166)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 03:01:57 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.8ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 38.4ms | Allocations: 13952)
+  Rendered layout layouts/application.html.erb (Duration: 42.7ms | Allocations: 16034)
+Completed 200 OK in 74ms (Views: 34.3ms | ActiveRecord: 10.1ms | Allocations: 20803)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 03:07:01 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/creators/5"):
+  
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:07:05 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.3ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  Rendered articles/index.html.erb within layouts/application (Duration: 54.0ms | Allocations: 7273)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 7347)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 7.0ms | Allocations: 20531)
+
+
+  
+ActionView::Template::Error (undefined method `creator_path' for #<ActionView::Base:0x00000000013e48>
+Did you mean?  creators_index_path):
+    17: <ul>
+    18:   <% @creators.each do |creator| %>
+    19:     <li>
+    20:       <%= link_to creator.channel, creator %>
+    21:     </li>
+    22:   <% end %>
+    23: </ul>
+  
+app/views/articles/index.html.erb:20
+app/views/articles/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:07:26 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 5401)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 19350)
+Completed 200 OK in 49ms (Views: 27.4ms | ActiveRecord: 11.4ms | Allocations: 32339)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 03:07:27 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 19.4ms | Allocations: 6620)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 8699)
+Completed 200 OK in 36ms (Views: 25.6ms | ActiveRecord: 3.9ms | Allocations: 10480)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 03:38:55 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3211)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 5280)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 1.2ms | Allocations: 6148)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:42:39 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 2432)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 4802)
+Completed 200 OK in 30ms (Views: 26.1ms | ActiveRecord: 1.4ms | Allocations: 5756)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:45:08 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 21.9ms | Allocations: 5921)
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 19776)
+Completed 200 OK in 54ms (Views: 32.5ms | ActiveRecord: 11.4ms | Allocations: 33005)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2022-02-20 03:45:21 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`article_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:15
+  Rendered articles/show.html.erb within layouts/application (Duration: 25.2ms | Allocations: 8643)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 10728)
+Completed 200 OK in 42ms (Views: 27.4ms | ActiveRecord: 5.3ms | Allocations: 12065)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2022-02-20 03:46:16 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`article_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:15
+  Rendered articles/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1670)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 3738)
+Completed 200 OK in 26ms (Views: 18.0ms | ActiveRecord: 1.6ms | Allocations: 4465)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2022-02-20 03:46:18 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`article_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:15
+  Rendered articles/show.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1676)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 3744)
+Completed 200 OK in 28ms (Views: 17.5ms | ActiveRecord: 1.2ms | Allocations: 4470)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:46:22 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 2211)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 4448)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 1.6ms | Allocations: 4737)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-02-20 03:46:31 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 443)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:48:12 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 2204)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 4438)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 1.3ms | Allocations: 4728)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-02-20 03:48:37 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 485)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/3" for 127.0.0.1 at 2022-02-20 03:49:42 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 485)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/3" for 127.0.0.1 at 2022-02-20 03:49:43 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 485)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:54:00 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.3ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2726)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 5189)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 1.5ms | Allocations: 6100)
+
+
+Started GET "/creators/3" for 127.0.0.1 at 2022-02-20 03:54:02 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 3[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 10.9ms | Allocations: 4407)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6637)
+Completed 200 OK in 24ms (Views: 16.9ms | ActiveRecord: 2.9ms | Allocations: 8362)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 03:54:06 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 994)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3218)
+Completed 200 OK in 18ms (Views: 11.9ms | ActiveRecord: 1.1ms | Allocations: 3948)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:54:11 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 2216)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 4483)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 1.2ms | Allocations: 4777)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:54:59 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2604)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 5056)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 1.1ms | Allocations: 6010)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-02-20 03:55:01 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 485)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/3" for 127.0.0.1 at 2022-02-20 03:55:57 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 230)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 13921)
+Completed 200 OK in 27ms (Views: 14.2ms | ActiveRecord: 4.0ms | Allocations: 22472)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:55:59 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 4398)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 6660)
+Completed 200 OK in 42ms (Views: 22.4ms | ActiveRecord: 5.6ms | Allocations: 14033)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-02-20 03:56:25 +0900
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for UsersController):
+  
+actionpack (7.0.0) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:56:26 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2204)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 4428)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 1.4ms | Allocations: 4717)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:58:13 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 5961)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 19869)
+Completed 200 OK in 43ms (Views: 23.6ms | ActiveRecord: 9.1ms | Allocations: 33132)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2022-02-20 03:58:14 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2474)
+Completed 200 OK in 21ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 4248)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-02-20 03:58:16 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1061)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3146)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 3469)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-02-20 03:58:25 +0900
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"En", "age"=>"10"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms | Allocations: 3498)
+
+
+  
+NameError (undefined local variable or method `creator_params' for #<UsersController:0x000000000304a8>
+Did you mean?  creator_path):
+  
+app/controllers/users_controller.rb:12:in `create'
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:58:44 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 5573)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 19274)
+Completed 200 OK in 44ms (Views: 23.0ms | ActiveRecord: 10.5ms | Allocations: 32265)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:58:44 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2205)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4436)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.7ms | Allocations: 4725)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-02-20 03:58:46 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 820)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2905)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 3557)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-02-20 03:58:50 +0900
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"en", "age"=>"10"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `age`, `created_at`, `updated_at`) VALUES ('en', '10', '2022-02-19 18:58:50.425690', '2022-02-19 18:58:50.425690')[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 11ms (ActiveRecord: 2.3ms | Allocations: 2911)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2022-02-20 03:58:50 +0900
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 46)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2294)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.6ms | Allocations: 3620)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:58:51 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2242)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 4481)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 1.3ms | Allocations: 4774)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-02-20 03:58:54 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2271)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 3000)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 03:58:57 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4528)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 6754)
+Completed 200 OK in 24ms (Views: 15.6ms | ActiveRecord: 2.3ms | Allocations: 8527)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 03:59:04 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 993)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3204)
+Completed 200 OK in 22ms (Views: 16.3ms | ActiveRecord: 1.7ms | Allocations: 3934)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 03:59:07 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.6ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 2253)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 4487)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 1.5ms | Allocations: 4780)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-02-20 03:59:08 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 820)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 2908)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 3176)
+
+
+Started GET "/creators/4" for 127.0.0.1 at 2022-02-20 03:59:13 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCreator Load (0.8ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 4[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 881)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3096)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 1.4ms | Allocations: 3825)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 03:59:15 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 993)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3210)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 1.3ms | Allocations: 3939)
+
+
+Started GET "/creators/new" for 127.0.0.1 at 2022-02-20 03:59:44 +0900
+Processing by CreatorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering creators/new.html.erb within layouts/application
+  Rendered creators/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1058)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3143)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 3465)
+
+
+Started GET "/creators/new" for 127.0.0.1 at 2022-02-20 03:59:46 +0900
+Processing by CreatorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering creators/new.html.erb within layouts/application
+  Rendered creators/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2886)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 3154)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 03:59:49 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 995)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3221)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 1.1ms | Allocations: 3950)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 04:02:30 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2104)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 4342)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 1.1ms | Allocations: 4632)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-02-20 04:02:33 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2300)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 3031)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-02-20 04:02:38 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 813)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 2904)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 3171)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2022-02-20 04:02:41 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2261)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.5ms | Allocations: 2991)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:02:45 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:8
+  Rendered creators/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 993)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3216)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 1.0ms | Allocations: 3946)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:14:31 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:13
+  Rendered creators/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1946)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4394)
+Completed 200 OK in 21ms (Views: 14.6ms | ActiveRecord: 1.4ms | Allocations: 5911)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:16:45 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1896)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4340)
+Completed 200 OK in 21ms (Views: 14.5ms | ActiveRecord: 1.0ms | Allocations: 5731)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:17:59 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1897)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4354)
+Completed 200 OK in 22ms (Views: 15.3ms | ActiveRecord: 1.2ms | Allocations: 5745)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:22:45 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1898)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4368)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 1.0ms | Allocations: 5761)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:22:46 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.6ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1287)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 3514)
+Completed 200 OK in 26ms (Views: 17.9ms | ActiveRecord: 1.8ms | Allocations: 4242)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:22:47 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.6ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3506)
+Completed 200 OK in 21ms (Views: 15.1ms | ActiveRecord: 1.2ms | Allocations: 4232)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:23:10 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.7ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1900)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 4361)
+Completed 200 OK in 30ms (Views: 21.8ms | ActiveRecord: 1.3ms | Allocations: 5754)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:24:44 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1896)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 4370)
+Completed 200 OK in 31ms (Views: 22.7ms | ActiveRecord: 1.4ms | Allocations: 5763)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:24:45 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1287)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 3508)
+Completed 200 OK in 28ms (Views: 20.4ms | ActiveRecord: 1.2ms | Allocations: 4236)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:25:23 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.6ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1896)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 4338)
+Completed 200 OK in 28ms (Views: 20.6ms | ActiveRecord: 1.3ms | Allocations: 5729)
+
+
+Started DELETE "/users/1" for 127.0.0.1 at 2022-02-20 04:25:41 +0900
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+actionpack (7.0.0) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:25:42 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.3ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1287)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3519)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.7ms | Allocations: 4246)
+
+
+Started DELETE "/users/1" for 127.0.0.1 at 2022-02-20 04:25:47 +0900
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+actionpack (7.0.0) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:25:47 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.3ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3514)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.7ms | Allocations: 4240)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:27:57 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 14.1ms | Allocations: 10781)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 24492)
+Completed 200 OK in 43ms (Views: 24.4ms | ActiveRecord: 7.6ms | Allocations: 32931)
+
+
+Started DELETE "/users/2" for 127.0.0.1 at 2022-02-20 04:28:01 +0900
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+actionpack (7.0.0) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:28:01 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.3ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 3527)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.7ms | Allocations: 4253)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 04:28:16 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.3ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 3611)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 5843)
+Completed 200 OK in 34ms (Views: 24.8ms | ActiveRecord: 4.0ms | Allocations: 7849)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-02-20 04:28:19 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 225)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2463)
+Completed 200 OK in 18ms (Views: 9.9ms | ActiveRecord: 0.6ms | Allocations: 4236)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:28:22 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1287)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3522)
+Completed 200 OK in 18ms (Views: 12.5ms | ActiveRecord: 1.4ms | Allocations: 4252)
+
+
+Started DELETE "/users/7" for 127.0.0.1 at 2022-02-20 04:28:27 +0900
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+actionpack (7.0.0) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:28:27 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.3ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3520)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 4247)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:29:15 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 12.9ms | Allocations: 10780)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 24517)
+Completed 200 OK in 42ms (Views: 27.9ms | ActiveRecord: 6.1ms | Allocations: 32956)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:29:16 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.8ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 3516)
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 1.5ms | Allocations: 4244)
+
+
+Started DELETE "/users/7" for 127.0.0.1 at 2022-02-20 04:29:19 +0900
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:22:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23:in `destroy'
+  [1m[36mUser::HABTM_Creators Delete All (0.5ms)[0m  [1m[31mDELETE FROM `creators_users` WHERE `creators_users`.`user_id` = 7[0m
+  ↳ app/controllers/users_controller.rb:23:in `destroy'
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 7[0m
+  ↳ app/controllers/users_controller.rb:23:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23:in `destroy'
+Redirected to http://localhost:3000/
+Completed 303 See Other in 18ms (ActiveRecord: 4.2ms | Allocations: 3561)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 04:29:19 +0900
+Processing by ArticlesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 3170)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 5412)
+Completed 200 OK in 25ms (Views: 17.3ms | ActiveRecord: 3.0ms | Allocations: 7362)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 04:29:23 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1223)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3450)
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 1.1ms | Allocations: 4179)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 05:09:50 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.7ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 10.8ms | Allocations: 10343)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 24041)
+Completed 200 OK in 42ms (Views: 26.8ms | ActiveRecord: 2.6ms | Allocations: 32240)
+
+
+Started DELETE "/users/2" for 127.0.0.1 at 2022-02-20 05:09:53 +0900
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 2510)
+
+
+  
+NameError (uninitialized constant UsersController::Creators_users
+Did you mean?  CreatorsUsers):
+  
+app/controllers/users_controller.rb:22:in `destroy'
+Started GET "/" for 127.0.0.1 at 2022-02-20 05:10:37 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 21.5ms | Allocations: 5426)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 19131)
+Completed 200 OK in 45ms (Views: 23.3ms | ActiveRecord: 11.5ms | Allocations: 32120)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 05:10:37 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2056)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4283)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.6ms | Allocations: 4572)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 05:10:40 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.5ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4173)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 6407)
+Completed 200 OK in 22ms (Views: 15.1ms | ActiveRecord: 2.2ms | Allocations: 8072)
+
+
+Started DELETE "/users/2" for 127.0.0.1 at 2022-02-20 05:10:44 +0900
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.0ms | Allocations: 1895)
+
+
+  
+ActiveRecord::UnknownPrimaryKey (Unknown primary key for table creators_users in model CreatorsUsers.):
+  
+app/controllers/users_controller.rb:22:in `destroy'
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 05:25:07 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 9.8ms | Allocations: 10347)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 24038)
+Completed 200 OK in 34ms (Views: 23.9ms | ActiveRecord: 1.4ms | Allocations: 32282)
+
+
+Started DELETE "/users/6" for 127.0.0.1 at 2022-02-20 05:25:10 +0900
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2066)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/users_controller.rb:24:in `destroy'
+Started GET "/" for 127.0.0.1 at 2022-02-20 05:47:40 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.8ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3453)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 5924)
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 1.7ms | Allocations: 8107)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-20 05:47:40 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mCreator Load (0.2ms)[0m  [1m[34mSELECT `creators`.* FROM `creators`[0m
+  ↳ app/views/articles/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/articles/index.html.erb:32
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2067)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4310)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.7ms | Allocations: 4600)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2022-02-20 05:47:44 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 225)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2455)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 4225)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 05:47:46 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 12.4ms | Allocations: 2972)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 5208)
+Completed 200 OK in 27ms (Views: 21.0ms | ActiveRecord: 1.1ms | Allocations: 6429)
+
+
+Started DELETE "/creators/5?creatorid=5&userid=6" for 127.0.0.1 at 2022-02-20 05:47:50 +0900
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for CreatorsController):
+  
+actionpack (7.0.0) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.0) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.0) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 05:47:50 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.3ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1626)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3874)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.6ms | Allocations: 4601)
+
+
+Started GET "/creators/5" for 127.0.0.1 at 2022-02-20 07:07:25 +0900
+Processing by CreatorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreator Load (0.4ms)[0m  [1m[34mSELECT `creators`.* FROM `creators` WHERE `creators`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/creators_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering creators/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `creators_users` ON `users`.`id` = `creators_users`.`user_id` WHERE `creators_users`.`creator_id` = 5[0m
+  ↳ app/views/creators/show.html.erb:18
+  Rendered creators/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2276)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 4721)
+Completed 200 OK in 24ms (Views: 18.0ms | ActiveRecord: 1.6ms | Allocations: 6237)
+
+

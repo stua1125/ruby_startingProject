@@ -1,9 +1,29 @@
 class UsersController < ApplicationController
 
+  def show
+    @user = User.find(params[:id])
+  end
+
+  def new
+    @user = User.new
+  end
+
   def create
-    @creator = Creator.find(params[:creator_id])
-    @user = @creator.users.create(users_params)
-    redirect_to article_path(@creator)
+    @user = User.new(users_params)
+
+    if @user.save
+      redirect_to @user
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    # @creuser = CreatorsUsers.find(params[:id])
+    @creuser = CreatorsUsers.where(user_id:params[:id])
+    @creuser.destroy
+
+    redirect_to :root, status: :see_other
   end
 
   private

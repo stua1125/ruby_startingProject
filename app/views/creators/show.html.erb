@@ -1,54 +1,65 @@
 
 <!--<p><%#= @creators.contents %></p>-->
 
-<h1><%= @cre.channel %></h1>
-<p><%= @cre.contents %></p>
+<h1>channel : <%= @cre.channel %></h1>
+<p>contents : <%= @cre.contents %></p>
 
 <h2>user list</h2>
-<% @cre.users.each do |user| %>
-  <p>
-    <strong>name:</strong>
-    <%= user.name %>
-  </p>
+<table border="1">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+      <th>delete</th>
+    </tr>
+  </thead>
 
-  <p>
-    <strong>age:</strong>
-    <%= user.age %>
-  </p>
-<% end %>
+  <tbody>
+  <% @cre.users.each do |user| %>
+    <tr>
+      <th><%= user.name %></th>
+      <th><%= user.age %></th>
+      <th><%= link_to "Destory", {userid: user, creatorid: @cre}, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></th>
+      <th><%= @cre.user %></th>
+    </tr>
+  <% end %>
+  </tbody>
 
+</table>
+
+<br>
 <%= link_to "root", root_path %>
 
-<h2>Add a user and subscript this channel:</h2>
-<%= form_with model: [ @cre, @cre.users.build ] do |form| %>
-  <%= @cre.users.class %>
+<!--<h2>Add a user and subscript this channel:</h2>
+<%#= form_with model: [ @cre, @cre.users.build ] do |form| %>
+  <%#= @cre.users.class %>
   <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%#= form.label :name %><br>
+    <%#= form.text_field :name %>
   </p>
   <p>
-    <%= form.label :age %><br>
-    <%= form.text_area :age %>
+    <%#= form.label :age %><br>
+    <%#= form.text_area :age %>
   </p>
   <p>
-    <%= form.submit %>
-  </p>
-
-<% end %>
-
-<h2>subscript this channel:</h2>  <!--원하는 url new_creators_user GET  path: /creators_users/new(.:format) action: creators_users#new-->
-                                  <!--controllers naming issue-->
-<%= form_with url: "/creators_users/create", method: :post do |form| %>
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
-  <p>
-    <%= form.label :age %><br>
-    <%= form.text_area :age %>
-  </p>
-  <p>
-    <%= form.submit %>
+    <%#= form.submit %>
   </p>
 
-<% end %>
+<%# end %>-->
+
+<!--<h2>subscript this channel:</h2>  <!--원하는 url new_creators_user GET  path: /creators_users/new(.:format) action: creators_users#new-->
+<!--                                  <!--controllers naming issue-->
+<%#= form_with url: "/creators_users/create", method: :post do |form| %>
+<!--  <p>-->
+<!--    <%#= form.label :name %><br>-->
+    <%#= form.text_field :name %>
+<!--  </p>-->
+<!--  <p>-->
+<!--    <%#= form.label :age %><br>-->
+    <%#= form.text_area :age %>
+<!--  </p>-->
+<!--  <p>-->
+    <%#= form.submit %>
+<!--  </p>-->
+
+<%# end %>
